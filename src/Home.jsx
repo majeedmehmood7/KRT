@@ -5,8 +5,16 @@ import
  import 
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
+ import ProgressBar from './ProgressBar';
+ import CircleProgressBar from './CircleProgressBar';
+ import SemiCircleProgress from './SemiCircleProgress';
+
+
  
 function Home() {
+    const progress = 0.6;
+
+
 
     const data = [
         {
@@ -117,17 +125,49 @@ function Home() {
 
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>Incharge</h3>
+                    <h3>WareHouse Incharge</h3>
                     <BsPersonFill className='card_icon'/>
                 </div>
                 <p>0</p>
             </div>
         </div>
-
+        <ProgressBar/>
         <div >
+
+            <div>
+            <div className="progress-bars">
+        <CircleProgressBar
+          progress={75}
+          title="Layout"
+        //   subtitle="64"
+        />
+        <CircleProgressBar
+          progress={45}
+          title="Excavation"
+        //   subtitle="6"
+        />
+        <CircleProgressBar
+          progress={90}
+          title="Stone Blast"
+        //   subtitle="Subtitle 3"
+        />
+        <CircleProgressBar
+          progress={30}
+          title="Lean"
+        //   subtitle="Subtitle 4"
+        />
+      </div>
+            </div>
       </div>
 
+
+      <div className="App">
+      <SemiCircleProgress progress={progress} />
+    </div>
       
+
+
+
 
         {/* <div className='charts'>
             <ResponsiveContainer width="100%" height="100%">

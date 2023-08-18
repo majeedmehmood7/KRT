@@ -4,6 +4,7 @@ import Header from './Header'
 import Sidebar from './Sidebar'
 import Home from './Home'
 import UserAccount from './components/UserAccount'
+import Login from './Login'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -17,6 +18,7 @@ function App() {
       <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <Home/>
+      {/* <Login/> */}
       {/* <UserAccount/> */}
     </div>
   )

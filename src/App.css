@@ -1,6 +1,4 @@
 
-
-
 body {
   margin: 0;
   padding: 0;
@@ -147,35 +145,38 @@ body {
 }
 
 .card:first-child {
-  background-color: #2962ff;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+
 }
 
 .card:nth-child(2) {
-  background-color: #ff6d00;
+  background: linear-gradient(120deg, #ff9a8b 0%, #ff6a88 100%);
 }
 
 .card:nth-child(3) {
-  background-color: #2e7d32;
+  background: linear-gradient(120deg, #2c3e50 0%, #bdc3c7 100%);
 }
 
 .card:nth-child(4) {
-  background-color: #d50000;
+  background: linear-gradient(120deg, #3494e6 0%, #ec6ead 100%);
+
 }
 
 .card:nth-child(5) {
-  background-color: #d50000;
+  background: linear-gradient(120deg, #2c3e50 0%, #3498db 100%);
+
 }
 
 .card:nth-child(6) {
-  background-color: #2e7d32;
+  background: linear-gradient(120deg, #ff9770 0%, #ffcd8c 100%);
 }
 
 .card:nth-child(7) {
-  background-color: #ff6d00;
+  background: linear-gradient(120deg, #ff6b6b 0%, #ffa03a 100%);
 }
 
 .card:nth-child(8) {
-  background-color: #2962ff;
+  background: linear-gradient(120deg, #e55d87 0%, #5fc3e4 100%);
 }
 
 .card-inner {
@@ -244,3 +245,15 @@ body {
     display: none;
   }
 }
+
+/* App.css */
+.App {
+  text-align: center;
+  color: white;
+}
+
+.progress-bars {
+  display: flex;
+  justify-content: space-between;
+}
+

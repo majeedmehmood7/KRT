@@ -1,0 +1,38 @@
+/* CircularProgressBar.css */
+.circular-progress {
+  display: inline-block;
+  text-align: center;
+  /* margin: 20px; */
+}
+
+.text-top,
+.text-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #fffafa;
+  margin: 5px 0;
+  font-size: Bold;
+}
+
+.circle-text {
+  font-size: 20px;
+  font-weight: bold;
+  fill: #f7f6f6;
+}
+
+svg {
+  transform: rotate(360deg);
+}
+
+.circle-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 8;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #007bff;
+  stroke-width: 8;
+  transition: stroke-dashoffset 0.3s ease;
+}
