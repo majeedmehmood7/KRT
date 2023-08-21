@@ -8,7 +8,9 @@ import
  import ProgressBar from './ProgressBar';
  import CircleProgressBar from './CircleProgressBar';
  import SemiCircleProgress from './SemiCircleProgress';
-
+ import BasicTable from './User';
+ import DataTable from './Adduser';
+ import Location from './Location';
 
  
 function Home() {
@@ -24,7 +26,7 @@ function Home() {
           amt: 1200,
         },
         {
-          name: 'Page B',
+          name: 'crush',
           uv: 3000,
           pv: 1398,
           amt: 2210,
@@ -169,7 +171,7 @@ function Home() {
 
 
 
-        {/* <div className='charts'>
+        <div className='charts'>
             <ResponsiveContainer width="100%" height="100%">
             <BarChart
             width={500}
@@ -214,7 +216,23 @@ function Home() {
                 </LineChart>
             </ResponsiveContainer>
 
-        </div> */}
+            <div>
+            </div>
+            <div>
+              <BasicTable/>
+            </div>
+            
+            <div>
+              <Location/>
+            </div>
+            <br>
+            </br>
+            <div>
+              <DataTable/>
+            </div>
+
+
+        </div>
     </main>
   )
 }
