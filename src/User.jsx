@@ -36,8 +36,6 @@ export default function BasicTable() {
         
             <h1 align='center'>Users</h1>
             <div>
-            <TransitionsModal/>
-            <h2>Add User</h2>
             </div>
            
           <TableRow>

@@ -1,0 +1,37 @@
+.speedometer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .speedometer {
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .indicator {
+    width: 3px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.5s ease;
+  }
+  
+  .speed-input {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60px;
+    text-align: center;
+  }
+  

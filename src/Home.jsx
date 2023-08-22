@@ -7,10 +7,13 @@ import
  from 'recharts';
  import ProgressBar from './ProgressBar';
  import CircleProgressBar from './CircleProgressBar';
- import SemiCircleProgress from './SemiCircleProgress';
  import BasicTable from './User';
  import DataTable from './Adduser';
  import Location from './Location';
+ import ReactSpeedometerComponent from './Speedometer';
+import Barchart from './BarChart';
+import ItemTable from './Adduser';
+import FileUpload from './FileUpload';
 
  
 function Home() {
@@ -21,44 +24,44 @@ function Home() {
     const data = [
         {
           name: 'Cement Bags',
-          uv: 4640,
-          pv: 3440,
+          Issue: 4640,
+          Rec: 3440,
           amt: 1200,
         },
         {
           name: 'crush',
-          uv: 3000,
-          pv: 1398,
+          Issue: 3000,
+          Rec: 1398,
           amt: 2210,
         },
         {
           name: 'Page C',
-          uv: 2000,
-          pv: 9800,
+          Issue: 2000,
+          Rec: 2800,
           amt: 2290,
         },
         {
           name: 'Page D',
-          uv: 2780,
-          pv: 3908,
+          Issue: 2780,
+          Rec: 3908,
           amt: 2000,
         },
         {
           name: 'Page E',
-          uv: 1890,
-          pv: 4800,
+          Issue: 1890,
+          Rec: 4800,
           amt: 2181,
         },
         {
           name: 'Page F',
-          uv: 2390,
-          pv: 3800,
+          Issue: 2390,
+          Rec: 3800,
           amt: 2500,
         },
         {
           name: 'Page G',
-          uv: 3490,
-          pv: 4300,
+          Issue: 3490,
+          Rec: 4300,
           amt: 2100,
         },
       ];
@@ -135,6 +138,13 @@ function Home() {
         </div>
         <ProgressBar/>
         <div >
+        <div className="App">
+      <h1>Speedometer Progress Bar</h1>
+      <div className="App">
+      <ReactSpeedometerComponent/>
+    </div>
+    </div>
+
 
             <div>
             <div className="progress-bars">
@@ -164,7 +174,7 @@ function Home() {
 
 
       <div className="App">
-      <SemiCircleProgress progress={progress} />
+      
     </div>
       
 
@@ -189,8 +199,8 @@ function Home() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="pv" fill="#8884d8" />
-                <Bar dataKey="uv" fill="#82ca9d" />
+                <Bar dataKey="Rec" fill="#f68ca0" />
+                <Bar dataKey="Issue" fill="#bba0ec" />
                 </BarChart>
             </ResponsiveContainer>
 
@@ -211,16 +221,19 @@ function Home() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="Rec" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Issue" stroke="#82ca9d" />
                 </LineChart>
             </ResponsiveContainer>
 
             <div>
             </div>
             <div>
-              <BasicTable/>
+              
             </div>
+            {/* <div>
+              <BasicTable/>
+            </div> */}
             
             <div>
               <Location/>
@@ -230,6 +243,16 @@ function Home() {
             <div>
               <DataTable/>
             </div>
+            <div>
+              {/* <ItemTable/> */}
+            </div>
+          
+          <div>
+            File Upload
+            <button>
+            <FileUpload/>
+              </button>
+          </div>
 
 
         </div>

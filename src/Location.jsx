@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Button from '@mui/material/Button';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 import TransitionsModal from './Modal';
 
 const columns = [
@@ -10,24 +12,13 @@ const columns = [
   { field: 'city', headerName: 'City', width: 130 },
   { field: 'villages', headerName: 'Villages', width: 130 },
   {
-    field: 'resetButton',
-    headerName: 'Reset',
-    sortable: false,
-    width: 100,
-    renderCell: (params) => (
-      <Button variant="outlined" color="primary" size="small">
-        Reset
-      </Button>
-    ),
-  },
-  {
     field: 'editButton',
     headerName: 'Edit',
     sortable: false,
     width: 100,
     renderCell: (params) => (
-      <Button variant="outlined" color="primary" size="small">
-        Edit
+      <Button startIcon={<EditIcon />}>
+        {/* Edit */}
       </Button>
     ),
   },
@@ -37,16 +28,16 @@ const columns = [
     sortable: false,
     width: 100,
     renderCell: (params) => (
-      <Button variant="outlined" color="secondary" size="small">
-        Delete
+      <Button startIcon={<DeleteIcon />}>
+        {/* Delete */}
       </Button>
     ),
   },
 ];
 
 const rows = [
-  { id: 1, provinces: 'Province A', district: 'District X', city: 'City One', villages: 35 },
-  { id: 2, provinces: 'Province B', district: 'District Y', city: 'City Two', villages: 42 },
+  { id: 1, provinces: 'Province A', district: 'District X', city: 'City One', villages: '35 Villages' },
+  { id: 2, provinces: 'Province B', district: 'District Y', city: 'City Two', villages: '42 Villages' },
   // ... other rows ...
 ];
 
@@ -55,17 +46,20 @@ export default function Location() {
     <div>
       <h1>Location</h1>
       <div>
-      <TransitionsModal/>
+        <TransitionsModal />
       </div>
-      <div style={{ height: 600, width: '100%', display: 'flex', justifyContent: '', alignItems: 'center', background: 'white' }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          pageSize={10}
-          checkboxSelection
-        />
+      <div
+        style={{
+          height: 600,
+          width: '100%',
+          display: 'flex',
+          justifyContent: '',
+          alignItems: 'center',
+          background: 'white',
+        }}
+      >
+        <DataGrid rows={rows} columns={columns} pageSize={10} checkboxSelection />
       </div>
-      
     </div>
   );
 }
